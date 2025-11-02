@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CreditCard, Hand, GitBranch, HelpCircle } from "lucide-react";
+import { CreditCard, Hand, GitBranch, HelpCircle, Scroll, RotateCw, Clock, List } from "lucide-react";
 
 const deliveryMechanisms = [
   {
@@ -35,6 +35,38 @@ const deliveryMechanisms = [
     icon: HelpCircle,
     route: "/quiz-flow",
     color: "bg-accent"
+  },
+  {
+    id: "scroll-story",
+    title: "Scroll Story",
+    description: "Continuous vertical scroll. Like TikTok for learning.",
+    icon: Scroll,
+    route: "/scroll-story",
+    color: "bg-primary"
+  },
+  {
+    id: "flip-cards",
+    title: "Flip Cards",
+    description: "Cards flip to reveal answers. Interactive flashcards.",
+    icon: RotateCw,
+    route: "/flip-cards",
+    color: "bg-accent"
+  },
+  {
+    id: "timeline",
+    title: "Timeline Journey",
+    description: "Historical progression. Tap to mark milestones.",
+    icon: Clock,
+    route: "/timeline",
+    color: "bg-primary"
+  },
+  {
+    id: "accordion",
+    title: "Accordion Stack",
+    description: "Expandable sections. Jump to what interests you.",
+    icon: List,
+    route: "/accordion",
+    color: "bg-accent"
   }
 ];
 
@@ -50,12 +82,12 @@ export default function Index() {
             Unrot Content Delivery
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Four different mechanisms for delivering 5-minute learning experiences. Each designed to compete with social media for attention.
+            Eight different mechanisms for delivering 5-minute learning experiences. Each designed to compete with social media for attention.
           </p>
         </div>
 
         {/* Delivery Mechanisms Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 max-w-7xl mx-auto">
           {deliveryMechanisms.map((mechanism) => {
             const Icon = mechanism.icon;
             return (
@@ -127,6 +159,30 @@ export default function Index() {
                     <td className="p-4 border-r-2 border-black">Factual learning, retention-focused</td>
                     <td className="p-4 border-r-2 border-black">⭐⭐⭐⭐</td>
                     <td className="p-4">Medium</td>
+                  </tr>
+                  <tr className="border-b-2 border-black">
+                    <td className="p-4 font-bold border-r-2 border-black">Scroll Story</td>
+                    <td className="p-4 border-r-2 border-black">Visual narratives, social media feel</td>
+                    <td className="p-4 border-r-2 border-black">⭐⭐⭐⭐⭐</td>
+                    <td className="p-4">Easy</td>
+                  </tr>
+                  <tr className="bg-muted/30">
+                    <td className="p-4 font-bold border-r-2 border-black">Flip Cards</td>
+                    <td className="p-4 border-r-2 border-black">Quick facts, flashcard-style</td>
+                    <td className="p-4 border-r-2 border-black">⭐⭐⭐⭐</td>
+                    <td className="p-4">Medium</td>
+                  </tr>
+                  <tr className="border-b-2 border-black">
+                    <td className="p-4 font-bold border-r-2 border-black">Timeline</td>
+                    <td className="p-4 border-r-2 border-black">Historical events, progression stories</td>
+                    <td className="p-4 border-r-2 border-black">⭐⭐⭐</td>
+                    <td className="p-4">Easy</td>
+                  </tr>
+                  <tr className="bg-muted/30">
+                    <td className="p-4 font-bold border-r-2 border-black">Accordion</td>
+                    <td className="p-4 border-r-2 border-black">Reference material, non-linear</td>
+                    <td className="p-4 border-r-2 border-black">⭐⭐⭐</td>
+                    <td className="p-4">Easy</td>
                   </tr>
                 </tbody>
               </table>
