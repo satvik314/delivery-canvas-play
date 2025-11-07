@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CreditCard, Hand, GitBranch, HelpCircle, Scroll, RotateCw, Clock, List } from "lucide-react";
+import { CreditCard, Hand, GitBranch, HelpCircle, Scroll, RotateCw, Clock, List, Palette } from "lucide-react";
 
 const deliveryMechanisms = [
   {
@@ -81,9 +81,22 @@ export default function Index() {
           <h1 className="text-5xl font-bold mb-4 text-foreground" style={{ textShadow: "4px 4px 0px rgba(0,0,0,0.1)" }}>
             Unrot Content Delivery
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-6">
             Eight different mechanisms for delivering 5-minute learning experiences. Each designed to compete with social media for attention.
           </p>
+          
+          <Card 
+            className="inline-flex items-center gap-3 p-4 border-4 border-primary bg-primary/10 hover:bg-primary/20 transition-colors cursor-pointer shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1"
+            onClick={() => navigate("/themes")}
+          >
+            <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center border-2 border-black">
+              <Palette className="h-6 w-6 text-primary-foreground" />
+            </div>
+            <div className="text-left">
+              <div className="font-bold text-lg">🌙 Night-Friendly Themes</div>
+              <div className="text-sm text-muted-foreground">Easy on the eyes for evening reading</div>
+            </div>
+          </Card>
         </div>
 
         {/* Delivery Mechanisms Grid */}

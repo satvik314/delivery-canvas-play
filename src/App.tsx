@@ -12,6 +12,7 @@ import ScrollStoryDelivery from "./pages/ScrollStoryDelivery";
 import FlipCardDelivery from "./pages/FlipCardDelivery";
 import TimelineDelivery from "./pages/TimelineDelivery";
 import AccordionDelivery from "./pages/AccordionDelivery";
+import ThemeComparison from "./pages/ThemeComparison";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/flip-cards" element={<FlipCardDelivery />} />
           <Route path="/timeline" element={<TimelineDelivery />} />
           <Route path="/accordion" element={<AccordionDelivery />} />
+          <Route path="/themes" element={<ThemeComparison />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
